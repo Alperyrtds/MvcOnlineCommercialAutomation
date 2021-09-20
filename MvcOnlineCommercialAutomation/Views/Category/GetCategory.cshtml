@@ -3,6 +3,18 @@
     ViewBag.Title = "GetCategory";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
+<br />
+<h2>Kategori Düzenleme </h2>
+<br />
 
-<h2>Kategori Düzenleme Sayfası</h2>
+@using (Html.BeginForm("GetCategory", "Category", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.Label("Kategori Ad")
+        @Html.TextBoxFor(x=>x.CategoryName,new {@class="form-control" })
+        @Html.HiddenFor(x=>x.CategoryId)
+    </div>
+    <br />
+    <button class="btn btn-warning"> Güncelle</button>
+}
 

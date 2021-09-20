@@ -42,14 +42,16 @@ namespace MvcOnlineCommercialAutomation.Controllers
         public ActionResult GetCategory(int id)
         {
             var p = context.TblCategories.Find(id);
-            return View("AddCategory", p);
+            return View("GetCategory", p);
         }
         [HttpPost]
-        public ActionResult GetCategory(Category category)
+        public ActionResult GetCategory(Category c)
         {
-            context.TblCategories.Add(category);
+            var p = context.TblCategories.Find(c.CategoryId);
+            p.CategoryName = c.CategoryName;
             context.SaveChanges();
             return RedirectToAction("Index");
         }
+       
     }
 }

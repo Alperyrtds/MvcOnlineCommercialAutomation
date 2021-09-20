@@ -25,7 +25,8 @@ namespace MvcOnlineCommercialAutomation.Models.Class
         [Column(TypeName = "Nvarchar")]
         [StringLength(300)]
         public string ProductPicture { get; set; }
-        public Category Category { get; set; }
+        public int CategoryId { get; set; }
+        public virtual Category Category { get; set; }
         public ICollection<SaleOperation> SaleOperations { get; set; }
     }
 }
