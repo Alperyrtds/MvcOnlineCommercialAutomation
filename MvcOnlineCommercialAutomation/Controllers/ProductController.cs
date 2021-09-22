@@ -63,6 +63,8 @@ namespace MvcOnlineCommercialAutomation.Controllers
             ViewBag.v1 = value1;
             var p = context.TblProducts.Find(id);
             return View("GetProduct", p);
+
+
         }
         [HttpPost]
         public ActionResult GetProduct(Product product)

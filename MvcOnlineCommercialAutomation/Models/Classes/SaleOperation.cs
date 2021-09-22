@@ -15,8 +15,11 @@ namespace MvcOnlineCommercialAutomation.Models.Class
         public decimal Price { get; set; }
         public decimal TotalPrice { get; set; }
 
-        public Product Product { get; set; }
-        public Cariler Cariler { get; set; }
-        public Employee Employee { get; set; }
+        public int ProductId { get; set; }
+        public int CariId { get; set; }
+        public int EmployeeId { get; set; }
+        public virtual Product Product { get; set; }
+        public virtual Cariler Cariler { get; set; }
+        public virtual Employee Employee { get; set; }
     }
 }

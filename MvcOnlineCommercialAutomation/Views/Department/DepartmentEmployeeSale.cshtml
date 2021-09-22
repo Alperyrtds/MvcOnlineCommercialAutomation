@@ -1,0 +1,39 @@
+﻿@using MvcOnlineCommercialAutomation.Models.Class
+@model List<SaleOperation>
+@{
+    ViewBag.Title = "DepartmentEmployeeSale";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h2>Departman Personel Satış</h2>
+<br />
+
+<ol class="breadcrumb mb-4">
+    <li class="breadcrumb-item active"><b>Personel Adı</b>: @ViewBag.v2</li>
+</ol>
+<br />
+<table class="table table-condensed">
+    <tr>
+        <th>Satış Id</th>
+        <th>Ürün</th>
+        <th>Alıcı</th>
+        <th>Fiyat</th>
+        <th>Adet</th>
+        <th>Toplam</th>
+        <th>Tarih</th>
+        <th>Yazdır</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.SaleId</td>
+            <td>@item.Product.ProductName</td>
+            <td>@item.Cariler.CariName </td>
+            <td>@item.Price</td>
+            <td>@item.Adet</td>
+            <td>@item.TotalPrice</td>
+            <td>@item.Date</td>
+            <td><a href="#" class="btn btn-default" style="background-color:dodgerblue; color:white;">Yazdır</a></td>
+        </tr>
+    }
+</table>

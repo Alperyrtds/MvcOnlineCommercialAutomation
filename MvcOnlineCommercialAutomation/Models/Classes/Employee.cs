@@ -21,7 +21,8 @@ namespace MvcOnlineCommercialAutomation.Models.Class
         [StringLength(300)]
         public string EmployeeImage { get; set; }
 
+        public int DepartmentId { get; set; }
         public ICollection<SaleOperation> SaleOperations { get; set; }
-        public Department Department { get; set; }
+        public virtual Department Department { get; set; }
     }
 }
