@@ -1,0 +1,26 @@
+﻿@model MvcOnlineCommercialAutomation.Models.Class.Cariler
+@{
+    ViewBag.Title = "AddCari";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>Yeni Ürün Cari Sayfası</h2>
+<br />
+
+<form method="post" class="form-group">
+    @Html.Label("Cari Adı")
+    @Html.TextBoxFor(x => x.CariName, new { @class = "form-control" })
+    <br />
+    @Html.Label("Cari Soyadı")
+    @Html.TextBoxFor(x => x.CariSurname, new { @class = "form-control" })
+    <br />
+    @Html.Label("Cari Şehir")
+    @Html.TextBoxFor(x => x.CariCity, new { @class = "form-control" })
+    <br />
+    @Html.Label("Cari Mail")
+    @Html.TextBoxFor(x => x.CariMail, new { @class = "form-control" })
+    <br />
+   
+    <button class="btn btn-primary">Kaydet</button>
+</form>

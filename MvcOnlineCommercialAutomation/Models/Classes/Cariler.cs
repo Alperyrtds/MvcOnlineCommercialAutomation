@@ -12,10 +12,11 @@ namespace MvcOnlineCommercialAutomation.Models.Class
         [Key]
         public int CariId { get; set; }
         [Column(TypeName = "Nvarchar")]
-        [StringLength(30)]
+        [StringLength(30,ErrorMessage ="En fazla 30 karakter yazabilirsiniz")]
         public string CariName { get; set; }
         [Column(TypeName = "Nvarchar")]
         [StringLength(30)]
+        [Required(ErrorMessage ="Soyadı Boş Geçemezsin!")]
         public string CariSurname { get; set; }
         [Column(TypeName = "Nvarchar")]
         [StringLength(15)]
@@ -23,6 +24,7 @@ namespace MvcOnlineCommercialAutomation.Models.Class
         [Column(TypeName = "Nvarchar")]
         [StringLength(50)]
         public string CariMail { get; set; }
+        public bool Status { get; set; }
         public ICollection<SaleOperation> SaleOperations { get; set; }
 
     }
