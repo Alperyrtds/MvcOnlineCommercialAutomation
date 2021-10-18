@@ -13,11 +13,11 @@
     @Html.HiddenFor(x => x.CariId)
     @Html.Label("Cari Adı")
     @Html.TextBoxFor(x => x.CariName, new { @class = "form-control" })
-    @Html.ValidationMessageFor(x => x.CariName, " ", new { @style = "color:red" })
+    @Html.ValidationMessageFor(x => x.CariName, "", new { @style = "color:red" })
     <br />
     @Html.Label("Cari Soyadı")
     @Html.TextBoxFor(x => x.CariSurname, new { @class = "form-control" })
-    @Html.ValidationMessageFor(x => x.CariSurname, " ", new { @style = "color:red" })
+    @Html.ValidationMessageFor(x => x.CariSurname, "", new { @style = "color:red" })
 
     <br />
     @Html.Label("Cari Şehir")

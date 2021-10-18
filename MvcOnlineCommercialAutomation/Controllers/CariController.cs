@@ -58,5 +58,12 @@ namespace MvcOnlineCommercialAutomation.Controllers
             context.SaveChanges();
             return RedirectToAction("Index");
         }
+        public ActionResult CariSale(int id)
+        {
+            var values = context.TblSaleOperation.Where(x => x.CariId == id).ToList();
+            var cr = context.TblCarilers.Where(x => x.CariId == id).Select(y => y.CariName + " " + y.CariSurname).FirstOrDefault();
+            ViewBag.cari = cr;
+            return View(values);
+        }
     }
 }
